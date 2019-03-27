@@ -1,0 +1,5 @@
+name: Restricted Access
+type: module
+description: 'A module to handle the restriction to access the page.'
+package: Bootcamp
+core: 8.x

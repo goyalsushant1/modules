@@ -1,0 +1,8 @@
+restrict_module.page:
+  path: '/getnodes'
+  defaults:
+    _controller: '\Drupal\restrict_module\Controller\RestrictAccessController::getContentPrint'
+    _title: 'Published Nodes'
+  requirements:
+    _permission: 'access content'
+    -role: 'administrator + publisher'
