@@ -5,4 +5,4 @@ restrict_module.page:
     _title: 'Published Nodes'
   requirements:
     _permission: 'access content'
-    -role: 'administrator + publisher'
+    _role: 'administrator + publisher'

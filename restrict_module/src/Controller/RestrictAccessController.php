@@ -17,11 +17,9 @@ class RestrictAccessController extends ControllerBase
      **/
     public function getContentPrint(){
     
-    $db = \Drupal::database();
-    $query = $db->select('node_field_data','data');
-    $query->fields('data', array('title','type'));
-    $result = $query->execute();
-    $resultArray = $result->fetchAll();
+    $db = \Drupal::database()
+    ->select('node_field_data','data')
+    ->fields('data', ['title','type'])->execute()->fetchAll();
     // print_r($resultArray);
     // kint($resultArray);
     // var_dump($resultArray);
@@ -30,7 +28,7 @@ class RestrictAccessController extends ControllerBase
     //   print_r($comment);
     // }
     $str = '<table><thead><th>ID</th><th>Name</th></thead>';
-    foreach($resultArray as $key)
+    foreach($db as $key)
     {
       $str .='<tr>';
       foreach($key as $subkey)
